@@ -1,5 +1,10 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 class Swordsman extends Character {
-  constructor(elem) {
-    super(elem);
+  constructor(name) {
+    super(name);
+    this.type = 'Swordsman';
+    this.attack = 40;
+    this.defence = 10;
   }
 }
