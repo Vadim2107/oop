@@ -30,6 +30,7 @@ export default class Character {
   damage(points) {
     if (this.health >= 0) {
       this.health -= points * (1 - this.defence / 100);
+      return this.health;
     } else {
       throw new Error('Нельзя расчитать левел жизни персонажа. Персонаж умер!');
     }

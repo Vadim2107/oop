@@ -44,8 +44,17 @@ test('throws on levelUp', () => {
 });
 
 test('throws on damage', () => {
-  character.health = 0;
+  character.health = -10;
+  character.defence = 25;
+
   expect(() => {
-    character.damage(points);
+    character.damage(25);
   }).toThrow();
+});
+
+test('calculate the level of health', () => {
+  character.health = 100;
+  character.defence = 25;
+
+  expect(character.damage(25)).toBeCloseTo(81.25);
 });
